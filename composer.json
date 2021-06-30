@@ -50,8 +50,10 @@
         }
     ],
     "require": {
+        "ext-json": "*",
         "brianhenryie/bh-wc-imap-reconcile": "dev-master",
         "brianhenryie/wp-logger": "dev-master",
+        "chillerlan/php-qrcode": "^4.3",
         "pablo-sg-pacheco/wp-namespace-autoloader": "*",
         "php": ">=7.4"
     },

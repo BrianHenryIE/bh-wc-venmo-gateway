@@ -2,6 +2,9 @@
 
 # BH WC Venmo Gateway
 
+Requires php-imap
+
+
 wp option delete bh-wc-venmo-gateway-last-imap-reconcile-run-time
 
 wp cron event run bh_wc_venmo_gateway_check_for_payment_emails

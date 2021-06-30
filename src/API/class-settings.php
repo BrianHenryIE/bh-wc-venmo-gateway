@@ -136,7 +136,7 @@ class Settings implements Settings_Interface, IMAP_Reconcile_Settings_Interface,
 	}
 
 	public function get_plugin_version(): string {
-		return '2.1.5';
+		return '2.2.0';
 	}
 
 

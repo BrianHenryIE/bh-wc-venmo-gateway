@@ -5,6 +5,7 @@
 
 namespace BrianHenryIE\WC_Venmo_Gateway\WooCommerce;
 
+use BrianHenryIE\WC_Venmo_Gateway\chillerlan\QRCode\QRCode;
 use WC_Order;
 use WC_Payment_Gateways;
 
@@ -45,10 +46,16 @@ class Thank_You {
 
 		// Your order has been received.
 
-		$instructions = "<p>Please send payment of {$order->get_formatted_order_total()} via Venmo to <a href=\"https://venmo.com/{$venmo_username}\">@{$venmo_username}</a></p>";
+		$venmo_url = "https://venmo.com/{$venmo_username}";
+
+		$instructions = "<p>Please send payment of {$order->get_formatted_order_total()} via Venmo to <a href=\"{$venmo_url}\">@{$venmo_username}</a></p>";
 
 		$instructions .= "<p>* Enter the order number – <b>{$order->get_id()}</b> – and nothing else in the order note.</p>";
 		$instructions .= "<p>* Pay the precise amount – <b>{$order->get_formatted_order_total()}</b> – so the payment can be automatically matched to the order.";
+
+		$instructions .= "<p><a href=\"https://venmo.com/{$venmo_username}\">";
+		$instructions .= '<img src="' . ( new QRCode() )->render( $venmo_url ) . '" alt="Payment QR code" />';
+		$instructions .= '</a></p>';
 
 		$instructions .= "<p><a href=\"https://venmo.com/{$venmo_username}\">Open Venmo</a></p>";
 
