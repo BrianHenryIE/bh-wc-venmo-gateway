@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e4ab4f5e549a4635fc8b0b64b2f127f",
+    "content-hash": "60ebe2d6252d0ee381326024403a687b",
     "packages": [
         {
             "name": "brianhenryie/bh-wc-imap-reconcile",
@@ -964,16 +964,16 @@
         },
         {
             "name": "brianhenryie/strauss",
-            "version": "0.9.0",
+            "version": "0.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BrianHenryIE/strauss.git",
-                "reference": "14a27261e047638d7184c7ef613ab3edde786d22"
+                "reference": "e96386641ba016e565d44e35bd5cb4dfaec0407a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BrianHenryIE/strauss/zipball/14a27261e047638d7184c7ef613ab3edde786d22",
-                "reference": "14a27261e047638d7184c7ef613ab3edde786d22",
+                "url": "https://api.github.com/repos/BrianHenryIE/strauss/zipball/e96386641ba016e565d44e35bd5cb4dfaec0407a",
+                "reference": "e96386641ba016e565d44e35bd5cb4dfaec0407a",
                 "shasum": ""
             },
             "require": {
@@ -1018,9 +1018,9 @@
             "description": "Composes all dependencies as a package inside a WordPress plugin",
             "support": {
                 "issues": "https://github.com/BrianHenryIE/strauss/issues",
-                "source": "https://github.com/BrianHenryIE/strauss/tree/0.9.0"
+                "source": "https://github.com/BrianHenryIE/strauss/tree/0.10.1"
             },
-            "time": "2021-06-02T23:43:55+00:00"
+            "time": "2021-07-01T23:06:14+00:00"
         },
         {
             "name": "codeception/codeception",
@@ -11379,6 +11379,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
+        "ext-json": "*",
         "php": ">=7.4"
     },
     "platform-dev": [],

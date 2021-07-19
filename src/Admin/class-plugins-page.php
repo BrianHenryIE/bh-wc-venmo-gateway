@@ -31,6 +31,10 @@ class Plugins_Page {
 	 */
 	public function add_settings_action_link( array $links_array ): array {
 
+		if ( ! class_exists( WC_Payment_Gateways::class ) ) {
+			return $links_array;
+		}
+
 		$payment_gateways = WC_Payment_Gateways::instance()->payment_gateways();
 		$venmo_gateways   = array();
 		foreach ( $payment_gateways as $gateway ) {

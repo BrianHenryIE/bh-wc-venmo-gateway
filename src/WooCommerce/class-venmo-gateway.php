@@ -119,10 +119,10 @@ class Venmo_Gateway extends WC_Payment_Gateway {
 		$customer_venmo_username = esc_attr( $_POST[ self::CUSTOMER_VENMO_USERNAME_META_KEY ] );
 
 		// TODO: Add to the WP User's account meta too.
-		$order->add_meta_data( self::CUSTOMER_VENMO_USERNAME_META_KEY, $customer_venmo_username );
+		$order->add_meta_data( self::CUSTOMER_VENMO_USERNAME_META_KEY, $customer_venmo_username, true );
 
 		$destination_venmo_username = $this->get_option( 'venmo_username' );
-		$order->add_meta_data( self::DESTINATION_VENMO_USERNAME_META_KEY, $destination_venmo_username );
+		$order->add_meta_data( self::DESTINATION_VENMO_USERNAME_META_KEY, $destination_venmo_username, true );
 
 		$order->add_order_note( "Customer Venmo username: {$customer_venmo_username} <br/>sent to pay: {$destination_venmo_username}." );
 

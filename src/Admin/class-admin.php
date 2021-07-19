@@ -50,6 +50,11 @@ class Admin {
 			return;
 		}
 
+		// e.g. during WooCommerce updating itself.
+		if ( ! class_exists( \WC_Payment_Gateways::class ) ) {
+			return;
+		}
+
 		$last_activated = get_option( 'bh-wc-venmo-gateway-last-activated-time', time() );
 
 		// If last activation was longer than a week ago, return.

@@ -1,16 +1,16 @@
-[![WordPress tested 5.5](https://img.shields.io/badge/WordPress-v5.5%20tested-0073aa.svg)](https://wordpress.org/plugins/plugin_slug) [![PHPCS WPCS](https://img.shields.io/badge/PHPCS-WordPress%20Coding%20Standards-8892BF.svg)](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) [![PHPUnit ](.github/coverage.svg)](https://brianhenryie.github.io/plugin_slug/)
+[![WordPress tested 5.5](https://img.shields.io/badge/WordPress-v5.5%20tested-0073aa.svg)](https://wordpress.org/plugins/bh-wc-venmo-gateway) [![PHPCS WPCS](https://img.shields.io/badge/PHPCS-WordPress%20Coding%20Standards-8892BF.svg)](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) [![PHPUnit ](.github/coverage.svg)](https://brianhenryie.github.io/plugin_slug/)
 
 # BH WC Venmo Gateway
 
 Requires php-imap
 
 
-wp option delete bh-wc-venmo-gateway-last-imap-reconcile-run-time
+`wp option delete bh-wc-venmo-gateway-last-imap-reconcile-run-time`
 
-wp cron event run bh_wc_venmo_gateway_check_for_payment_emails
+`wp cron event run bh_wc_venmo_gateway_check_for_payment_emails`
 
 
-wp option delete bh-wc-venmo-gateway-last-imap-reconcile-run-time; wp cron event run bh_wc_venmo_gateway_check_for_payment_emails
+`wp option delete bh-wc-venmo-gateway-last-imap-reconcile-run-time; wp cron event run bh_wc_venmo_gateway_check_for_payment_emails`
 
 ```
 <?php
@@ -41,6 +41,7 @@ Clone this repo, open PhpStorm, then run `composer install` to install the depen
 
 ```
 git clone https://github.com/brianhenryie/bh-wc-venmo-gateway.git;
+cd bh-wc-venmo-gateway;
 open -a PhpStorm ./;
 composer install;
 ```

@@ -59,10 +59,8 @@ class Thank_You {
 
 		$instructions .= "<p><a href=\"https://venmo.com/{$venmo_username}\">Open Venmo</a></p>";
 
-		// TODO: QR code.
-
 		// Remove the last </p> because it is already contained in the HTML this string will be printed in.
-		$instructions = preg_replace( '/<\/p>>$/', '', $instructions );
+		$instructions = substr( $instructions, 0, -4 );
 
 		return $thank_you_text . '</p>' . wptexturize( $instructions );
 
